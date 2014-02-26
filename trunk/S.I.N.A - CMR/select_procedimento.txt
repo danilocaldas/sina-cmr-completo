@@ -1,0 +1,21 @@
+ID NOME             CODIGO     
+-- ---------------- ---------- 
+0  ONCOLOGIA        6874365439 
+1  RADIOTERAPIA     5643709    
+2  A. C. MARCAPASSO 87698      
+3  IMPLANTE COCLEAR 34534      
+4  BRAQUITERAPIA    78878      
+5  TOMOGRAFIA       45645      
+6  RESSONANCIA      45654      
+7  AIH FISICO       54645      
+8  AIH SISTEMA      45645      
+9  AIH SIS MUTIRÃO  3456345    
+10 SOROLOGIA        68899      
+11 ORTODONTIA       34534      
+12 TRAT. HIV        345345T    
+13 CINTILOGRAFIA    34534      
+14 PSIQUIATRIA      6789698    
+15 POSTECTOMIA      7868       
+16 BIOPSIA          256        
+17 AUDIOMETRIA      23         
+18 HIPERTIREOIDISMO 758        
