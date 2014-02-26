@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relMainProdMedPeriodoSub" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="be999575-d7ac-4c3a-a416-8d79a0c2bf8d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="dataDe" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dataAte" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="funcionario" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     *
+FROM
+     "PRODUCAO" PRODUCAO
+WHERE
+funcionario like $P{funcionario} and
+DATA_DIGITACAO BETWEEN $P{dataDe} AND $P{dataAte}
+order by
+DATA_DIGITACAO]]>
+	</queryString>
+	<field name="ID" class="java.lang.Integer"/>
+	<field name="FUNCIONARIO" class="java.lang.String"/>
+	<field name="PRESTADOR" class="java.lang.String"/>
+	<field name="PROCEDIMENTO" class="java.lang.String"/>
+	<field name="DATA_ENTRADA" class="java.sql.Date"/>
+	<field name="DATA_DIGITACAO" class="java.sql.Date"/>
+	<field name="QUANTIDADE" class="java.lang.Integer"/>
+	<group name="FUNCIONARIO">
+		<groupExpression><![CDATA[$F{FUNCIONARIO}]]></groupExpression>
+	</group>
+	<group name="funcionario">
+		<groupExpression><![CDATA[$F{FUNCIONARIO}]]></groupExpression>
+		<groupHeader>
+			<band height="59">
+				<line>
+					<reportElement uuid="bbc3ab32-6454-47f5-97da-c8457dc157a2" x="0" y="11" width="555" height="1"/>
+					<graphicElement>
+						<pen lineStyle="Double"/>
+					</graphicElement>
+				</line>
+				<textField>
+					<reportElement uuid="d226c9ae-f3bd-4366-b048-af8b6325956b" x="0" y="11" width="138" height="24"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{FUNCIONARIO}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="bbc3ab32-6454-47f5-97da-c8457dc157a2" x="0" y="56" width="555" height="1"/>
+					<graphicElement>
+						<pen lineStyle="Double"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement uuid="029cd1b9-025e-4ef1-b30e-4974db9a4472" x="0" y="36" width="100" height="20"/>
+					<textElement textAlignment="Center">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[PRESTADOR]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="a616a7b9-adfe-4584-89fa-bbd274d1d23d" x="138" y="35" width="88" height="20"/>
+					<textElement textAlignment="Center">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[PROCEDIMENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="29bf84cf-96b9-44e8-afcb-54939cdb503a" x="255" y="36" width="44" height="20"/>
+					<textElement textAlignment="Center">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[QTD]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="18273ab0-833f-4fca-b229-b4b671dfe721" x="343" y="36" width="68" height="20"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[DIGITACAO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="f6332f31-f56f-417d-b1f9-460587b4e758" x="444" y="36" width="56" height="20"/>
+					<textElement textAlignment="Center">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[ENTRADA]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement uuid="c0061433-f370-4f15-b94b-a7c70cab695a" x="0" y="0" width="117" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PRESTADOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="aad4b3d4-5654-42f4-a342-ecff812ceede" x="124" y="0" width="116" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{PROCEDIMENTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="23ab5f26-d94e-4af3-8000-223a27ec3bde" x="455" y="0" width="45" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DATA_ENTRADA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5166f589-f2a4-4a29-bdfd-09fa8f4a3c4a" x="269" y="0" width="30" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{QUANTIDADE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1a20f919-7c6d-431d-be61-172169d4104a" x="355" y="0" width="35" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DATA_DIGITACAO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bed0477b-2850-487a-97a7-56a373c0c6ce">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\Danilo\\Documents\\NetBeansProjects\\appCMR.v1.5\\relatorio\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="prestador" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="procedimento" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="de" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ate" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT SUM(qtd)  AS "SOMA" FROM boletimentrega where prestador like $P{prestador} and procedimento like $P{procedimento}
+and diaUtil between $P{de} and $P{ate}]]>
+	</queryString>
+	<field name="SOMA" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="77" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1b4d021f-faf3-42bd-a69f-72f8c76e79e7" x="178" y="56" width="204" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[SMS - Secretária Municipal de Saúde]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="36176055-0f12-42e7-8666-f5d926eac260" x="142" y="29" width="288" height="27"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Central Municipal de Regulação]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b1ee677f-37f6-413b-b8d0-6dfd72327999" x="91" y="0" width="379" height="29"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO DE SAÍDA DE LAUDOS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<subreport>
+				<reportElement uuid="315e68f9-8bcf-4cd0-b024-0a4d2489aed6" x="0" y="0" width="556" height="40"/>
+				<subreportParameter name="de">
+					<subreportParameterExpression><![CDATA[$P{de}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="prestador">
+					<subreportParameterExpression><![CDATA[$P{prestador}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ate">
+					<subreportParameterExpression><![CDATA[$P{ate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="procedimento">
+					<subreportParameterExpression><![CDATA[$P{procedimento}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["W:\\CRM\\CRM.Nucleo de Digitacao\\S.I.N.A - CMR\\relatorio\\relMainBoletimEntregaPresProcPerioSub.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="2a516567-efbe-4dee-bc9a-a8e2ff1a6384" x="0" y="12" width="180" height="21"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Quantidade total entregue:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="99d744d3-23e5-40f0-af1a-a6cc19857936" x="180" y="11" width="104" height="21"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SOMA}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="749d9982-2a72-46d8-99eb-2356be9144dc" x="356" y="12" width="200" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="8fb7fd49-40e9-4a01-9c41-6e94ef71ed5f" x="0" y="11" width="555" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>

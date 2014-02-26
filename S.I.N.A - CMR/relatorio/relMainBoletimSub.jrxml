@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relMainBoletim_subreport1" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="e2d4d6fe-a33e-4920-a6d2-d18c12eb0af2">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="prestador" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="de" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ate" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select
+ *
+from 
+boletimrecebimento
+where
+prestador = $P{prestador}
+and
+diaUtil
+between
+$P{de} and $P{ate}
+order by diaUtil]]>
+	</queryString>
+	<field name="ID" class="java.lang.Integer"/>
+	<field name="PRESTADOR" class="java.lang.String"/>
+	<field name="PROCEDIMENTO" class="java.lang.String"/>
+	<field name="DIAUTIL" class="java.sql.Date"/>
+	<field name="QTD" class="java.lang.Integer"/>
+	<group name="PRESTADOR">
+		<groupExpression><![CDATA[$F{PRESTADOR}]]></groupExpression>
+	</group>
+	<group name="prestador">
+		<groupExpression><![CDATA[$F{PRESTADOR}]]></groupExpression>
+		<groupHeader>
+			<band height="40">
+				<staticText>
+					<reportElement uuid="9dc584ff-73f9-4e77-9381-68b2662062c3" x="187" y="13" width="118" height="21"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PROCEDIMENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="8d778034-6b82-4171-a47c-f350972bd127" x="339" y="12" width="71" height="21"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[DIA UTIL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="6f37d9e2-d9af-417c-9a0e-3b62aeca9182" x="467" y="13" width="53" height="21"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[QTD]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="eb58491a-a7a8-41c1-a2ce-39b2d7e5205c" x="0" y="13" width="187" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{PRESTADOR}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="d5affe0f-d81e-43fa-8aa5-065b3df31771" x="0" y="12" width="555" height="1"/>
+					<graphicElement>
+						<pen lineStyle="Double"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="d5affe0f-d81e-43fa-8aa5-065b3df31771" x="2" y="34" width="553" height="1"/>
+					<graphicElement>
+						<pen lineStyle="Double"/>
+					</graphicElement>
+				</line>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement uuid="0df58af6-0d13-4d6e-8d69-a4555239d923" x="187" y="1" width="118" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PROCEDIMENTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fbc7eda5-b320-4050-b477-703efdc92e73" x="352" y="1" width="43" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DIAUTIL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="351bd1a9-d954-40dd-a183-bf3c50fedd94" x="455" y="1" width="80" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{QTD}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="5" splitType="Stretch"/>
+	</summary>
+</jasperReport>

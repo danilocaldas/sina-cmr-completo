@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" columnCount="2" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="401" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="432b0294-ca2e-4c44-85f2-459086fe1325">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="71"/>
+	<parameter name="mes" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ano" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     CAIXA."NUMERO" AS CAIXA_NUMERO,
+     CAIXA."ANO" AS CAIXA_ANO,
+     CAIXA."MES" AS CAIXA_MES,
+     CAIXA."COR" AS CAIXA_COR,
+     CAIXA."PRESTADOR" AS CAIXA_PRESTADOR,
+     CAIXA."PROCEDIMENTO" AS CAIXA_PROCEDIMENTO
+FROM
+     "CAIXA" CAIXA
+WHERE
+	ANO LIKE $P{ano} 
+	and MES LIKE $P{mes}
+ORDER BY
+	NUMERO ASC]]>
+	</queryString>
+	<field name="CAIXA_NUMERO" class="java.lang.Integer"/>
+	<field name="CAIXA_ANO" class="java.lang.String"/>
+	<field name="CAIXA_MES" class="java.lang.String"/>
+	<field name="CAIXA_COR" class="java.lang.String"/>
+	<field name="CAIXA_PRESTADOR" class="java.lang.String"/>
+	<field name="CAIXA_PROCEDIMENTO" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="555" splitType="Stretch">
+			<textField>
+				<reportElement uuid="8c25b6cf-26a6-4b2a-8d16-016cd33fd3a2" x="131" y="28" width="199" height="44"/>
+				<textElement>
+					<font size="30" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CAIXA_ANO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="ec33e229-fdfb-4b08-9f6e-1ce779321874" x="39" y="28" width="92" height="44"/>
+				<textElement>
+					<font size="30" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ANO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a9e7c422-242d-4fde-9f8f-2daec82d2b98" x="39" y="82" width="92" height="51"/>
+				<textElement>
+					<font size="30" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MÊS:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="a64fa3ae-6103-47cf-b80f-46414631f730" x="131" y="82" width="230" height="51"/>
+				<textElement>
+					<font size="30" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CAIXA_MES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="322862e4-5b38-42f4-9942-63330dc413ea" x="131" y="154" width="199" height="90"/>
+				<textElement>
+					<font size="46" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CAIXA_NUMERO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="fbf285fc-9319-4f18-af0f-3d901f0343d8" x="56" y="244" width="187" height="44"/>
+				<textElement>
+					<font size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRESTADOR]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="6d5ad7b1-545e-442d-aed9-c8beb5c747eb" x="112" y="288" width="187" height="104"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CAIXA_PRESTADOR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="dcc024e2-ae9b-4586-af6d-e3fee1cd28c8" x="56" y="392" width="187" height="55"/>
+				<textElement>
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROCEDIMENTO]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="51745713-a4c8-4ea7-99d2-e9befd3a30c2" x="112" y="447" width="187" height="108"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CAIXA_PROCEDIMENTO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

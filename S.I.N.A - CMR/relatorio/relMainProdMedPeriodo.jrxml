@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bed0477b-2850-487a-97a7-56a373c0c6ce">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="56"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="dataDe" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dataAte" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\Danilo\\Documents\\NetBeansProjects\\appCMR.v1.5\\relatorio\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     SUM(quantidade_laudos) AS "SOMA"
+FROM
+     "PRODUCAO_MEDICA" PRODUCAO_MEDICA
+WHERE
+DATA_ANALISE BETWEEN $P{dataDe} AND $P{dataAte}]]>
+	</queryString>
+	<field name="SOMA" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="77" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="b1ee677f-37f6-413b-b8d0-6dfd72327999" x="80" y="0" width="403" height="29"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO DE ANÁLISE DE MÉDICA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="36176055-0f12-42e7-8666-f5d926eac260" x="141" y="29" width="266" height="27"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Central Municipal de Regulação]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1b4d021f-faf3-42bd-a69f-72f8c76e79e7" x="169" y="56" width="214" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[SMS - Secretária Municipal de Saúde]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<subreport>
+				<reportElement uuid="dbef82e0-db28-4434-a177-0305ad2ddb89" x="0" y="0" width="555" height="42"/>
+				<subreportParameter name="dataAte">
+					<subreportParameterExpression><![CDATA[$P{dataAte}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dataDe">
+					<subreportParameterExpression><![CDATA[$P{dataDe}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["W:\\CRM\\CRM.Nucleo de Digitacao\\S.I.N.A - CMR\\relatorio\\relMainProdMedPeriodoSub.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="2a516567-efbe-4dee-bc9a-a8e2ff1a6384" x="0" y="12" width="180" height="21"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Quantidade total analisada:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="99d744d3-23e5-40f0-af1a-a6cc19857936" x="180" y="11" width="104" height="21"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SOMA}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="749d9982-2a72-46d8-99eb-2356be9144dc" x="356" y="12" width="200" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="8fb7fd49-40e9-4a01-9c41-6e94ef71ed5f" x="0" y="11" width="555" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relMainBoletimEntregaPrestadorPeriodoSub" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="4a2612af-e982-43f5-a96f-89e3e9f5fac4">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="prestador" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="de" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ate" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     *
+FROM
+     "BOLETIMENTREGA" BOLETIMENTREGA
+where
+prestador like $P{prestador}
+and
+diaUtil
+between
+$P{de} and $P{ate}
+order by diaUtil]]>
+	</queryString>
+	<field name="ID" class="java.lang.Integer"/>
+	<field name="PRESTADOR" class="java.lang.String"/>
+	<field name="PROCEDIMENTO" class="java.lang.String"/>
+	<field name="DIAUTIL" class="java.sql.Date"/>
+	<field name="QTD" class="java.lang.Integer"/>
+	<group name="prestador">
+		<groupExpression><![CDATA[$F{PRESTADOR}]]></groupExpression>
+		<groupHeader>
+			<band height="35">
+				<textField>
+					<reportElement uuid="2a554252-32ed-418d-aa67-22c6772792bd" x="0" y="11" width="180" height="20"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{PRESTADOR}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="403f46bd-0624-406f-9b8b-badcdfac5313" x="180" y="12" width="100" height="20"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PROCEDIMENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="1ec1f702-978b-4852-97c9-471ebdd9ff0a" x="322" y="11" width="68" height="20"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[QTD]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="403ec6d9-1b90-4157-9436-bfc3cbf3dbc3" x="434" y="11" width="100" height="20"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[DIAUTIL]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="09675fce-2145-4d19-8593-389255e83465" x="0" y="10" width="555" height="1"/>
+					<graphicElement>
+						<pen lineStyle="Double"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="09675fce-2145-4d19-8593-389255e83465" x="0" y="31" width="555" height="1"/>
+					<graphicElement>
+						<pen lineStyle="Double"/>
+					</graphicElement>
+				</line>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement uuid="33bdde57-6918-4bf1-b8a1-fd294fe06267" x="190" y="0" width="119" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{PROCEDIMENTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9b42e36c-0c06-4faa-9a2a-9efcc003a383" x="465" y="0" width="50" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DIAUTIL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="682de143-6e5c-4180-acd2-ac5bc70a0c2f" x="352" y="0" width="48" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{QTD}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

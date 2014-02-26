@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relMainProdMedPeriodoSub" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="be999575-d7ac-4c3a-a416-8d79a0c2bf8d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="dataDe" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dataAte" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="funcionario" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     *
+FROM
+     "PRODUCAO_MEDICA" PRODUCAO_MEDICA
+WHERE
+FUNCIONARIO LIKE $P{funcionario} AND DATA_ANALISE BETWEEN $P{dataDe} AND $P{dataAte}
+order by
+data_analise]]>
+	</queryString>
+	<field name="ID" class="java.lang.Integer"/>
+	<field name="DATA_ENTRADA_CMR" class="java.sql.Date"/>
+	<field name="PRESTADOR" class="java.lang.String"/>
+	<field name="PROCEDIMENTO" class="java.lang.String"/>
+	<field name="QUANTIDADE_LAUDOS" class="java.lang.Integer"/>
+	<field name="DATA_ANALISE" class="java.sql.Date"/>
+	<field name="FUNCIONARIO" class="java.lang.String"/>
+	<field name="DATA_ENCAMINHAMENTO" class="java.sql.Date"/>
+	<field name="NUCLEOS" class="java.lang.String"/>
+	<group name="FUNCIONARIO">
+		<groupExpression><![CDATA[$F{FUNCIONARIO}]]></groupExpression>
+	</group>
+	<group name="funcionario">
+		<groupExpression><![CDATA[$F{FUNCIONARIO}]]></groupExpression>
+		<groupHeader>
+			<band height="60">
+				<line>
+					<reportElement uuid="bbc3ab32-6454-47f5-97da-c8457dc157a2" x="0" y="11" width="555" height="1"/>
+					<graphicElement>
+						<pen lineStyle="Double"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="bbc3ab32-6454-47f5-97da-c8457dc157a2" x="0" y="56" width="555" height="1"/>
+					<graphicElement>
+						<pen lineStyle="Double"/>
+					</graphicElement>
+				</line>
+				<textField>
+					<reportElement uuid="d226c9ae-f3bd-4366-b048-af8b6325956b" x="18" y="12" width="138" height="24"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{FUNCIONARIO}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="f6332f31-f56f-417d-b1f9-460587b4e758" x="0" y="37" width="56" height="20"/>
+					<textElement textAlignment="Center"/>
+					<text><![CDATA[ENTRADA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="029cd1b9-025e-4ef1-b30e-4974db9a4472" x="68" y="36" width="100" height="20"/>
+					<textElement textAlignment="Center"/>
+					<text><![CDATA[PRESTADOR]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="a616a7b9-adfe-4584-89fa-bbd274d1d23d" x="197" y="36" width="88" height="20"/>
+					<textElement textAlignment="Center"/>
+					<text><![CDATA[PROCEDIMENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="29bf84cf-96b9-44e8-afcb-54939cdb503a" x="299" y="36" width="44" height="20"/>
+					<textElement textAlignment="Center"/>
+					<text><![CDATA[QTD]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="6dc46541-e807-4529-b8ab-e45ada525ae7" x="343" y="36" width="67" height="20"/>
+					<textElement textAlignment="Center"/>
+					<text><![CDATA[ANÁLISADO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="4faa24ee-ed09-47b4-9af6-52fea2162bbb" x="410" y="36" width="76" height="20"/>
+					<textElement textAlignment="Center"/>
+					<text><![CDATA[ENCAMINHADO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="56a41610-eea6-4e30-b19f-8b49eb46ce0f" x="490" y="36" width="65" height="20"/>
+					<textElement textAlignment="Center"/>
+					<text><![CDATA[NÚCLEOS]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement uuid="c0061433-f370-4f15-b94b-a7c70cab695a" x="56" y="0" width="126" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{PRESTADOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="aad4b3d4-5654-42f4-a342-ecff812ceede" x="183" y="0" width="116" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{PROCEDIMENTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="bbc0bbe7-79d5-43fa-8bc2-680c12e18e4e" x="299" y="0" width="44" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{QUANTIDADE_LAUDOS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5c7f5626-ba87-4997-85d4-a17151a88d5a" x="425" y="0" width="45" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DATA_ENCAMINHAMENTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2b0b1db1-032b-4fbc-9f75-54c208dc3499" x="486" y="0" width="69" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{NUCLEOS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="96485cf5-b653-4e54-bc9c-c29ab80875a1" x="358" y="0" width="40" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DATA_ANALISE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f193ab5c-6a03-4f6b-b326-6061b6aab81f" x="8" y="0" width="48" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DATA_ENTRADA_CMR}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

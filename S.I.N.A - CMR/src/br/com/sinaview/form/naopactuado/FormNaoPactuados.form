@@ -1,0 +1,1475 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="grupo1">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel12">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="12" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Paciente:"/>
+      </Properties>
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="closable" type="boolean" value="true"/>
+    <Property name="iconifiable" type="boolean" value="true"/>
+    <Property name="title" type="java.lang.String" value="Relat&#xf3;rio de Municipios N&#xe3;o-Pactuados"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jPanel1" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jPanel2" max="32767" attributes="0"/>
+                  <Component id="jPanel1" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="213" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Preencha com os dados correntamente">
+              <Font PropertyName="font" name="Arial" size="12" style="1"/>
+            </TitledBorder>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="comboMunicipio" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtPaciente" alignment="1" max="32767" attributes="0"/>
+                      <Component id="txtObservacao" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="labelID" min="-2" pref="89" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="txtAno" min="-2" pref="65" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                          <Component id="comboPrestador" alignment="0" max="32767" attributes="0"/>
+                          <Component id="comboMes" alignment="0" pref="144" max="32767" attributes="0"/>
+                      </Group>
+                      <Component id="comboProcedimento" min="-2" pref="199" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtAno" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="labelID" min="-2" pref="20" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtPaciente" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="comboProcedimento" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                          <Component id="comboMunicipio" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="txtObservacao" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="comboPrestador" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="comboMes" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="19" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="12" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Id:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel2">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="12" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Prestador:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel3">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="12" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Procedimento:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel4">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="12" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="M&#xea;s:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel5">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="12" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Municipio:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel6">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="12" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Observa&#xe7;&#xe3;o:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="labelID">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="12" style="1"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="comboPrestador">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="comboProcedimento">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtObservacao">
+        </Component>
+        <Component class="javax.swing.JComboBox" name="comboMunicipio">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="415">
+                <StringItem index="0" value="Abaira"/>
+                <StringItem index="1" value="Abare"/>
+                <StringItem index="2" value="Acajutiba"/>
+                <StringItem index="3" value="Adustina"/>
+                <StringItem index="4" value="Agua Fria"/>
+                <StringItem index="5" value="Aiquara"/>
+                <StringItem index="6" value="Alagoinhas"/>
+                <StringItem index="7" value="Alcobaca"/>
+                <StringItem index="8" value="Almadina"/>
+                <StringItem index="9" value="Amargosa"/>
+                <StringItem index="10" value="Amelia Rodrigues"/>
+                <StringItem index="11" value="America Dourada"/>
+                <StringItem index="12" value="Anage"/>
+                <StringItem index="13" value="Andarai"/>
+                <StringItem index="14" value="Andorinha"/>
+                <StringItem index="15" value="Angical"/>
+                <StringItem index="16" value="Anguera"/>
+                <StringItem index="17" value="Antas"/>
+                <StringItem index="18" value="Antonio Cardoso"/>
+                <StringItem index="19" value="Antonio Goncalves"/>
+                <StringItem index="20" value="Apora"/>
+                <StringItem index="21" value="Apuarema"/>
+                <StringItem index="22" value="Aracas"/>
+                <StringItem index="23" value="Aracatu"/>
+                <StringItem index="24" value="Araci"/>
+                <StringItem index="25" value="Aramari"/>
+                <StringItem index="26" value="Arataca"/>
+                <StringItem index="27" value="Aratuipe"/>
+                <StringItem index="28" value="Aurelino Leal"/>
+                <StringItem index="29" value="Baianopolis"/>
+                <StringItem index="30" value="Baixa Grande"/>
+                <StringItem index="31" value="Banzae"/>
+                <StringItem index="32" value="Barra da Estiva"/>
+                <StringItem index="33" value="Barra do Choca"/>
+                <StringItem index="34" value="Barra do Mendes"/>
+                <StringItem index="35" value="Barra do Rocha"/>
+                <StringItem index="36" value="Barra"/>
+                <StringItem index="37" value="Barreiras"/>
+                <StringItem index="38" value="Barro Alto"/>
+                <StringItem index="39" value="Barro Preto"/>
+                <StringItem index="40" value="Belmonte"/>
+                <StringItem index="41" value="Belo Campo"/>
+                <StringItem index="42" value="Biritinga"/>
+                <StringItem index="43" value="Boa Nova"/>
+                <StringItem index="44" value="Boa Vista do Tupim"/>
+                <StringItem index="45" value="Bom Jesus da Lapa"/>
+                <StringItem index="46" value="Bom Jesus da Serra"/>
+                <StringItem index="47" value="Boninal"/>
+                <StringItem index="48" value="Bonito"/>
+                <StringItem index="49" value="Boquira"/>
+                <StringItem index="50" value="Botupora"/>
+                <StringItem index="51" value="Brejoes"/>
+                <StringItem index="52" value="Brejolandia"/>
+                <StringItem index="53" value="Brotas de Macaubas"/>
+                <StringItem index="54" value="Brumado"/>
+                <StringItem index="55" value="Buerarema"/>
+                <StringItem index="56" value="Buritirama"/>
+                <StringItem index="57" value="Caatiba"/>
+                <StringItem index="58" value="Cabaceiras do Paraguacu"/>
+                <StringItem index="59" value="Cachoeira"/>
+                <StringItem index="60" value="Cacule"/>
+                <StringItem index="61" value="Caem"/>
+                <StringItem index="62" value="Caetanos"/>
+                <StringItem index="63" value="Caetite"/>
+                <StringItem index="64" value="Cafarnaum"/>
+                <StringItem index="65" value="Cairu"/>
+                <StringItem index="66" value="Caldeirao Grande"/>
+                <StringItem index="67" value="Camacan"/>
+                <StringItem index="68" value="Camacari"/>
+                <StringItem index="69" value="Camamu"/>
+                <StringItem index="70" value="Campo Alegre de Lourdes"/>
+                <StringItem index="71" value="Campo Formoso"/>
+                <StringItem index="72" value="Canapolis"/>
+                <StringItem index="73" value="Canarana"/>
+                <StringItem index="74" value="Canavieiras"/>
+                <StringItem index="75" value="Candeal"/>
+                <StringItem index="76" value="Candeias"/>
+                <StringItem index="77" value="Candiba"/>
+                <StringItem index="78" value="Candido Sales"/>
+                <StringItem index="79" value="Cansancao"/>
+                <StringItem index="80" value="Canudos"/>
+                <StringItem index="81" value="Capela do Alto Alegre"/>
+                <StringItem index="82" value="Capim Grosso"/>
+                <StringItem index="83" value="Caraibas"/>
+                <StringItem index="84" value="Caravelas"/>
+                <StringItem index="85" value="Cardeal da Silva"/>
+                <StringItem index="86" value="Carinhanha"/>
+                <StringItem index="87" value="Casa Nova"/>
+                <StringItem index="88" value="Castro Alves"/>
+                <StringItem index="89" value="Catolandia"/>
+                <StringItem index="90" value="Catu"/>
+                <StringItem index="91" value="Caturama"/>
+                <StringItem index="92" value="Central"/>
+                <StringItem index="93" value="Chorrocho"/>
+                <StringItem index="94" value="Cicero Dantas"/>
+                <StringItem index="95" value="Cipo"/>
+                <StringItem index="96" value="Coaraci"/>
+                <StringItem index="97" value="Cocos"/>
+                <StringItem index="98" value="Conceicao da Feira"/>
+                <StringItem index="99" value="Conceicao do Almeida"/>
+                <StringItem index="100" value="Conceicao do Coite"/>
+                <StringItem index="101" value="Conceicao do Jacuipe"/>
+                <StringItem index="102" value="Conde"/>
+                <StringItem index="103" value="Condeuba"/>
+                <StringItem index="104" value="Contendas do Sincora"/>
+                <StringItem index="105" value="Coracao de Maria"/>
+                <StringItem index="106" value="Cordeiros"/>
+                <StringItem index="107" value="Coribe"/>
+                <StringItem index="108" value="Coronel Joao Sa"/>
+                <StringItem index="109" value="Correntina"/>
+                <StringItem index="110" value="Cotegipe"/>
+                <StringItem index="111" value="Cravolandia"/>
+                <StringItem index="112" value="Crisopolis"/>
+                <StringItem index="113" value="Cristopolis"/>
+                <StringItem index="114" value="Cruz das Almas"/>
+                <StringItem index="115" value="Curaca"/>
+                <StringItem index="116" value="Dario Meira"/>
+                <StringItem index="117" value="Dias d&apos;Avila"/>
+                <StringItem index="118" value="Dom Basilio"/>
+                <StringItem index="119" value="Dom Macedo Costa"/>
+                <StringItem index="120" value="Elisio Medrado"/>
+                <StringItem index="121" value="Encruzilhada"/>
+                <StringItem index="122" value="Entre Rios"/>
+                <StringItem index="123" value="Erico Cardoso"/>
+                <StringItem index="124" value="Esplanada"/>
+                <StringItem index="125" value="Euclides da Cunha"/>
+                <StringItem index="126" value="Eunapolis"/>
+                <StringItem index="127" value="Fatima"/>
+                <StringItem index="128" value="Feira da Mata"/>
+                <StringItem index="129" value="Feira de Santana"/>
+                <StringItem index="130" value="Filadelfia"/>
+                <StringItem index="131" value="Firmino Alves"/>
+                <StringItem index="132" value="Floresta Azul"/>
+                <StringItem index="133" value="Formosa do Rio Preto"/>
+                <StringItem index="134" value="Gandu"/>
+                <StringItem index="135" value="Gaviao"/>
+                <StringItem index="136" value="Gentio do Ouro"/>
+                <StringItem index="137" value="Gloria"/>
+                <StringItem index="138" value="Gongogi"/>
+                <StringItem index="139" value="Governador Mangabeira"/>
+                <StringItem index="140" value="Guajeru"/>
+                <StringItem index="141" value="Guanambi"/>
+                <StringItem index="142" value="Guaratinga"/>
+                <StringItem index="143" value="Heliopolis"/>
+                <StringItem index="144" value="Iacu"/>
+                <StringItem index="145" value="Ibiassuce"/>
+                <StringItem index="146" value="Ibicarai"/>
+                <StringItem index="147" value="Ibicoara"/>
+                <StringItem index="148" value="Ibicui"/>
+                <StringItem index="149" value="Ibipeba"/>
+                <StringItem index="150" value="Ibipitanga"/>
+                <StringItem index="151" value="Ibiquera"/>
+                <StringItem index="152" value="Ibirapitanga"/>
+                <StringItem index="153" value="Ibirapua"/>
+                <StringItem index="154" value="Ibirataia"/>
+                <StringItem index="155" value="Ibitiara"/>
+                <StringItem index="156" value="Ibitita"/>
+                <StringItem index="157" value="Ibotirama"/>
+                <StringItem index="158" value="Ichu"/>
+                <StringItem index="159" value="Igapora"/>
+                <StringItem index="160" value="Igrapiuna"/>
+                <StringItem index="161" value="Iguai"/>
+                <StringItem index="162" value="Ilheus"/>
+                <StringItem index="163" value="Inhambupe"/>
+                <StringItem index="164" value="Ipecaeta"/>
+                <StringItem index="165" value="Ipiau"/>
+                <StringItem index="166" value="Ipira"/>
+                <StringItem index="167" value="Ipupiara"/>
+                <StringItem index="168" value="Irajuba"/>
+                <StringItem index="169" value="Iramaia"/>
+                <StringItem index="170" value="Iraquara"/>
+                <StringItem index="171" value="Irara"/>
+                <StringItem index="172" value="Irece"/>
+                <StringItem index="173" value="Itabela"/>
+                <StringItem index="174" value="Itaberaba"/>
+                <StringItem index="175" value="Itabuna"/>
+                <StringItem index="176" value="Itacare"/>
+                <StringItem index="177" value="Itaete"/>
+                <StringItem index="178" value="Itagi"/>
+                <StringItem index="179" value="Itagiba"/>
+                <StringItem index="180" value="Itagimirim"/>
+                <StringItem index="181" value="Itaguacu da Bahia"/>
+                <StringItem index="182" value="Itaju do Colonia"/>
+                <StringItem index="183" value="Itajuipe"/>
+                <StringItem index="184" value="Itamaraju"/>
+                <StringItem index="185" value="Itamari"/>
+                <StringItem index="186" value="Itambe"/>
+                <StringItem index="187" value="Itanagra"/>
+                <StringItem index="188" value="Itanhem"/>
+                <StringItem index="189" value="Itaparica"/>
+                <StringItem index="190" value="Itape"/>
+                <StringItem index="191" value="Itapebi"/>
+                <StringItem index="192" value="Itapetinga"/>
+                <StringItem index="193" value="Itapicuru"/>
+                <StringItem index="194" value="Itapitanga"/>
+                <StringItem index="195" value="Itaquara"/>
+                <StringItem index="196" value="Itarantim"/>
+                <StringItem index="197" value="Itatim"/>
+                <StringItem index="198" value="Itirucu"/>
+                <StringItem index="199" value="Itiuba"/>
+                <StringItem index="200" value="Itororo"/>
+                <StringItem index="201" value="Ituacu"/>
+                <StringItem index="202" value="Itubera"/>
+                <StringItem index="203" value="Iuiu"/>
+                <StringItem index="204" value="Jaborandi"/>
+                <StringItem index="205" value="Jacaraci"/>
+                <StringItem index="206" value="Jacobina"/>
+                <StringItem index="207" value="Jaguaquara"/>
+                <StringItem index="208" value="Jaguarari"/>
+                <StringItem index="209" value="Jaguaripe"/>
+                <StringItem index="210" value="Jandaira"/>
+                <StringItem index="211" value="Jequie"/>
+                <StringItem index="212" value="Jeremoabo"/>
+                <StringItem index="213" value="Jiquirica"/>
+                <StringItem index="214" value="Jitauna"/>
+                <StringItem index="215" value="Joao Dourado"/>
+                <StringItem index="216" value="Juazeiro"/>
+                <StringItem index="217" value="Jucurucu"/>
+                <StringItem index="218" value="Jussara"/>
+                <StringItem index="219" value="Jussari"/>
+                <StringItem index="220" value="Jussiape"/>
+                <StringItem index="221" value="Lafaiete Coutinho"/>
+                <StringItem index="222" value="Lagoa Real"/>
+                <StringItem index="223" value="Laje"/>
+                <StringItem index="224" value="Lajedao"/>
+                <StringItem index="225" value="Lajedinho"/>
+                <StringItem index="226" value="Lajedo do Tabocal"/>
+                <StringItem index="227" value="Lamarao"/>
+                <StringItem index="228" value="Lapao"/>
+                <StringItem index="229" value="Lauro de Freitas"/>
+                <StringItem index="230" value="Lencois"/>
+                <StringItem index="231" value="Licinio de Almeida"/>
+                <StringItem index="232" value="Livramento do Brumado"/>
+                <StringItem index="233" value="Macajuba"/>
+                <StringItem index="234" value="Macarani"/>
+                <StringItem index="235" value="Macaubas"/>
+                <StringItem index="236" value="Macurure"/>
+                <StringItem index="237" value="Madre de Deus"/>
+                <StringItem index="238" value="Maetinga"/>
+                <StringItem index="239" value="Maiquinique"/>
+                <StringItem index="240" value="Mairi"/>
+                <StringItem index="241" value="Malhada de Pedras"/>
+                <StringItem index="242" value="Malhada"/>
+                <StringItem index="243" value="Manoel Vitorino"/>
+                <StringItem index="244" value="Mansidao"/>
+                <StringItem index="245" value="Maracas"/>
+                <StringItem index="246" value="Maragogipe"/>
+                <StringItem index="247" value="Marau"/>
+                <StringItem index="248" value="Marcionilio Souza"/>
+                <StringItem index="249" value="Mascote"/>
+                <StringItem index="250" value="Mata de Sao Joao"/>
+                <StringItem index="251" value="Matina"/>
+                <StringItem index="252" value="Medeiros Neto"/>
+                <StringItem index="253" value="Miguel Calmon"/>
+                <StringItem index="254" value="Milagres"/>
+                <StringItem index="255" value="Mirangaba"/>
+                <StringItem index="256" value="Mirante"/>
+                <StringItem index="257" value="Monte Santo"/>
+                <StringItem index="258" value="Morpara"/>
+                <StringItem index="259" value="Morro do Chapeu"/>
+                <StringItem index="260" value="Mortugaba"/>
+                <StringItem index="261" value="Mucuge"/>
+                <StringItem index="262" value="Mucuri"/>
+                <StringItem index="263" value="Mulungu do Morro"/>
+                <StringItem index="264" value="Mundo Novo"/>
+                <StringItem index="265" value="Muniz Ferreira"/>
+                <StringItem index="266" value="Muquem de Sao Francisco"/>
+                <StringItem index="267" value="Muritiba"/>
+                <StringItem index="268" value="Mutuipe"/>
+                <StringItem index="269" value="Nazare"/>
+                <StringItem index="270" value="Nilo Pecanha"/>
+                <StringItem index="271" value="Nordestina"/>
+                <StringItem index="272" value="Nova Canaa"/>
+                <StringItem index="273" value="Nova Fatima"/>
+                <StringItem index="274" value="Nova Ibia"/>
+                <StringItem index="275" value="Nova Itarana"/>
+                <StringItem index="276" value="Nova Redencao"/>
+                <StringItem index="277" value="Nova Soure"/>
+                <StringItem index="278" value="Nova Vicosa"/>
+                <StringItem index="279" value="Novo Horizonte"/>
+                <StringItem index="280" value="Novo Triunfo"/>
+                <StringItem index="281" value="Olindina"/>
+                <StringItem index="282" value="Oliveira dos Brejinhos"/>
+                <StringItem index="283" value="Ouricangas"/>
+                <StringItem index="284" value="Ourolandia"/>
+                <StringItem index="285" value="Palmas de Monte Alto"/>
+                <StringItem index="286" value="Palmeiras"/>
+                <StringItem index="287" value="Paramirim"/>
+                <StringItem index="288" value="Paratinga"/>
+                <StringItem index="289" value="Paripiranga"/>
+                <StringItem index="290" value="Pau Brasil"/>
+                <StringItem index="291" value="Paulo Afonso"/>
+                <StringItem index="292" value="Pe de Serra"/>
+                <StringItem index="293" value="Pedrao"/>
+                <StringItem index="294" value="Pedro Alexandre"/>
+                <StringItem index="295" value="Piata"/>
+                <StringItem index="296" value="Pilao Arcado"/>
+                <StringItem index="297" value="Pindai"/>
+                <StringItem index="298" value="Pindobacu"/>
+                <StringItem index="299" value="Pintadas"/>
+                <StringItem index="300" value="Pirai do Norte"/>
+                <StringItem index="301" value="Piripa"/>
+                <StringItem index="302" value="Piritiba"/>
+                <StringItem index="303" value="Planaltino"/>
+                <StringItem index="304" value="Planalto"/>
+                <StringItem index="305" value="Pocoes"/>
+                <StringItem index="306" value="Pojuca"/>
+                <StringItem index="307" value="Ponto Novo"/>
+                <StringItem index="308" value="Porto Seguro"/>
+                <StringItem index="309" value="Potiragua"/>
+                <StringItem index="310" value="Prado"/>
+                <StringItem index="311" value="Presidente Dutra"/>
+                <StringItem index="312" value="Presidente Janio Quadros"/>
+                <StringItem index="313" value="Presidente Tancredo Neves"/>
+                <StringItem index="314" value="Queimadas"/>
+                <StringItem index="315" value="Quijingue"/>
+                <StringItem index="316" value="Quixabeira"/>
+                <StringItem index="317" value="Rafael Jambeiro"/>
+                <StringItem index="318" value="Remanso"/>
+                <StringItem index="319" value="Retirolandia"/>
+                <StringItem index="320" value="Riachao das Neves"/>
+                <StringItem index="321" value="Riachao do Jacuipe"/>
+                <StringItem index="322" value="Riacho de Santana"/>
+                <StringItem index="323" value="Ribeira do Amparo"/>
+                <StringItem index="324" value="Ribeira do Pombal"/>
+                <StringItem index="325" value="Ribeirao do Largo"/>
+                <StringItem index="326" value="Rio Real"/>
+                <StringItem index="327" value="Rio de Contas"/>
+                <StringItem index="328" value="Rio do Antonio"/>
+                <StringItem index="329" value="Rio do Pires"/>
+                <StringItem index="330" value="Rodelas"/>
+                <StringItem index="331" value="Ruy Barbosa"/>
+                <StringItem index="332" value="Salinas da Margarida"/>
+                <StringItem index="333" value="Salvador"/>
+                <StringItem index="334" value="Santa Barbara"/>
+                <StringItem index="335" value="Santa Brigida"/>
+                <StringItem index="336" value="Santa Cruz Cabralia"/>
+                <StringItem index="337" value="Santa Cruz da Vitoria"/>
+                <StringItem index="338" value="Santa Ines"/>
+                <StringItem index="339" value="Santa Luzia"/>
+                <StringItem index="340" value="Santa Maria da Vitoria"/>
+                <StringItem index="341" value="Santa Rita de Cassia"/>
+                <StringItem index="342" value="Santa Teresinha"/>
+                <StringItem index="343" value="Santaluz"/>
+                <StringItem index="344" value="Santana"/>
+                <StringItem index="345" value="Santanopolis"/>
+                <StringItem index="346" value="Santo Amaro"/>
+                <StringItem index="347" value="Santo Antonio de Jesus"/>
+                <StringItem index="348" value="Santo Estevao"/>
+                <StringItem index="349" value="Sao Desiderio"/>
+                <StringItem index="350" value="Sao Domingos"/>
+                <StringItem index="351" value="Sao Felipe"/>
+                <StringItem index="352" value="Sao Felix do Coribe"/>
+                <StringItem index="353" value="Sao Felix"/>
+                <StringItem index="354" value="Sao Francisco do Conde"/>
+                <StringItem index="355" value="Sao Gabriel"/>
+                <StringItem index="356" value="Sao Goncalo dos Campos"/>
+                <StringItem index="357" value="Sao Jose da Vitoria"/>
+                <StringItem index="358" value="Sao Jose do Jacuipe"/>
+                <StringItem index="359" value="Sao Miguel das Matas"/>
+                <StringItem index="360" value="Sao Sebastiao do Passe"/>
+                <StringItem index="361" value="Sapeacu"/>
+                <StringItem index="362" value="Satiro Dias"/>
+                <StringItem index="363" value="Saubara"/>
+                <StringItem index="364" value="Saude"/>
+                <StringItem index="365" value="Seabra"/>
+                <StringItem index="366" value="Sebastiao Laranjeiras"/>
+                <StringItem index="367" value="Senhor do Bonfim"/>
+                <StringItem index="368" value="Sento Se"/>
+                <StringItem index="369" value="Serra Dourada"/>
+                <StringItem index="370" value="Serra Preta"/>
+                <StringItem index="371" value="Serra do Ramalho"/>
+                <StringItem index="372" value="Serrinha"/>
+                <StringItem index="373" value="Serrolandia"/>
+                <StringItem index="374" value="Simoes Filho"/>
+                <StringItem index="375" value="Sitio do Mato"/>
+                <StringItem index="376" value="Sitio do Quinto"/>
+                <StringItem index="377" value="Sobradinho"/>
+                <StringItem index="378" value="Souto Soares"/>
+                <StringItem index="379" value="Tabocas do Brejo Velho"/>
+                <StringItem index="380" value="Tanhacu"/>
+                <StringItem index="381" value="Tanque Novo"/>
+                <StringItem index="382" value="Tanquinho"/>
+                <StringItem index="383" value="Taperoa"/>
+                <StringItem index="384" value="Tapiramuta"/>
+                <StringItem index="385" value="Teixeira de Freitas"/>
+                <StringItem index="386" value="Teodoro Sampaio"/>
+                <StringItem index="387" value="Teofilandia"/>
+                <StringItem index="388" value="Teolandia"/>
+                <StringItem index="389" value="Terra Nova"/>
+                <StringItem index="390" value="Tremedal"/>
+                <StringItem index="391" value="Tucano"/>
+                <StringItem index="392" value="Uaua"/>
+                <StringItem index="393" value="Ubaira"/>
+                <StringItem index="394" value="Ubaitaba"/>
+                <StringItem index="395" value="Ubata"/>
+                <StringItem index="396" value="Uibai"/>
+                <StringItem index="397" value="Umburanas"/>
+                <StringItem index="398" value="Una"/>
+                <StringItem index="399" value="Urandi"/>
+                <StringItem index="400" value="Urucuca"/>
+                <StringItem index="401" value="Utinga"/>
+                <StringItem index="402" value="Valenca"/>
+                <StringItem index="403" value="Valente"/>
+                <StringItem index="404" value="Varzea Nova"/>
+                <StringItem index="405" value="Varzea da Roca"/>
+                <StringItem index="406" value="Varzea do Poco"/>
+                <StringItem index="407" value="Varzedo"/>
+                <StringItem index="408" value="Vera Cruz"/>
+                <StringItem index="409" value="Vereda"/>
+                <StringItem index="410" value="Vitoria da Conquista"/>
+                <StringItem index="411" value="Wagner"/>
+                <StringItem index="412" value="Wanderley"/>
+                <StringItem index="413" value="Wenceslau Guimaraes"/>
+                <StringItem index="414" value="Xique-Xique"/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="comboMes">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="12">
+                <StringItem index="0" value="JANEIRO"/>
+                <StringItem index="1" value="FEVEREIRO"/>
+                <StringItem index="2" value="MAR&#xc7;O"/>
+                <StringItem index="3" value="ABRIL"/>
+                <StringItem index="4" value="MAIO"/>
+                <StringItem index="5" value="JUNHO"/>
+                <StringItem index="6" value="JULHO"/>
+                <StringItem index="7" value="AGOSTO"/>
+                <StringItem index="8" value="SETEMBRO"/>
+                <StringItem index="9" value="OUTUBRO"/>
+                <StringItem index="10" value="NOVEMBRO"/>
+                <StringItem index="11" value="DEZEMBRO"/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtPaciente">
+        </Component>
+        <Component class="javax.swing.JFormattedTextField" name="txtAno">
+          <Properties>
+            <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
+              <Format format="####" subtype="-1" type="0"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel11">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="11" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Ano:"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel3">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="btNovo" linkSize="2" min="-2" pref="158" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="btAtualizar" linkSize="2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="btSalvar" linkSize="2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="btExcluir" linkSize="2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="btCancelar" linkSize="2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btAtualizar" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btNovo" linkSize="3" alignment="3" min="-2" pref="44" max="-2" attributes="0"/>
+                      <Component id="btCancelar" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btExcluir" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btSalvar" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="btAtualizar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Atualizar"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btSalvar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Salvar"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btNovo">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Novo"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btCancelar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cancelar"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btExcluir">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Excluir"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel2">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Selecione o modo de pesquisa"/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="radioPrestador" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="radioProcedimento" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                              <Component id="comboProcedimentoPesquisa" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                  <Component id="radioMunicipio" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                      <Component id="txtAnoPesquisa" min="-2" pref="65" max="-2" attributes="0"/>
+                                      <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Component id="radioMes" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="comboPesquisaMes" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                                      <Component id="comboMunicipioPesquisa" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Component id="comboPrestadorPesquisa" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="btnPesquisar" min="-2" pref="128" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="btnImprimir" min="-2" pref="137" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="2" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="radioPrestador" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="radioProcedimento" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="comboProcedimentoPesquisa" linkSize="5" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="radioMes" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                          <Component id="radioMunicipio" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                          <Component id="txtAnoPesquisa" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="comboPrestadorPesquisa" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                                  <Component id="comboMunicipioPesquisa" linkSize="5" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="comboPesquisaMes" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="btnPesquisar" max="32767" attributes="0"/>
+                      <Component id="btnImprimir" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JRadioButton" name="radioPrestador">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="grupo1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Prestador"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="radioProcedimento">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="grupo1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Procedimento"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="radioMunicipio">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="grupo1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Municipio"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="radioMes">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="grupo1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Ano/M&#xea;s"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel7">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="12" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Prestador:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="comboPrestadorPesquisa">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel8">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="12" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Procedimento:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="comboProcedimentoPesquisa">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel9">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="12" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="M&#xea;s:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel10">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="12" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Municipio:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="comboMunicipioPesquisa">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="415">
+                <StringItem index="0" value="Abaira"/>
+                <StringItem index="1" value="Abare"/>
+                <StringItem index="2" value="Acajutiba"/>
+                <StringItem index="3" value="Adustina"/>
+                <StringItem index="4" value="Agua Fria"/>
+                <StringItem index="5" value="Aiquara"/>
+                <StringItem index="6" value="Alagoinhas"/>
+                <StringItem index="7" value="Alcobaca"/>
+                <StringItem index="8" value="Almadina"/>
+                <StringItem index="9" value="Amargosa"/>
+                <StringItem index="10" value="Amelia Rodrigues"/>
+                <StringItem index="11" value="America Dourada"/>
+                <StringItem index="12" value="Anage"/>
+                <StringItem index="13" value="Andarai"/>
+                <StringItem index="14" value="Andorinha"/>
+                <StringItem index="15" value="Angical"/>
+                <StringItem index="16" value="Anguera"/>
+                <StringItem index="17" value="Antas"/>
+                <StringItem index="18" value="Antonio Cardoso"/>
+                <StringItem index="19" value="Antonio Goncalves"/>
+                <StringItem index="20" value="Apora"/>
+                <StringItem index="21" value="Apuarema"/>
+                <StringItem index="22" value="Aracas"/>
+                <StringItem index="23" value="Aracatu"/>
+                <StringItem index="24" value="Araci"/>
+                <StringItem index="25" value="Aramari"/>
+                <StringItem index="26" value="Arataca"/>
+                <StringItem index="27" value="Aratuipe"/>
+                <StringItem index="28" value="Aurelino Leal"/>
+                <StringItem index="29" value="Baianopolis"/>
+                <StringItem index="30" value="Baixa Grande"/>
+                <StringItem index="31" value="Banzae"/>
+                <StringItem index="32" value="Barra da Estiva"/>
+                <StringItem index="33" value="Barra do Choca"/>
+                <StringItem index="34" value="Barra do Mendes"/>
+                <StringItem index="35" value="Barra do Rocha"/>
+                <StringItem index="36" value="Barra"/>
+                <StringItem index="37" value="Barreiras"/>
+                <StringItem index="38" value="Barro Alto"/>
+                <StringItem index="39" value="Barro Preto"/>
+                <StringItem index="40" value="Belmonte"/>
+                <StringItem index="41" value="Belo Campo"/>
+                <StringItem index="42" value="Biritinga"/>
+                <StringItem index="43" value="Boa Nova"/>
+                <StringItem index="44" value="Boa Vista do Tupim"/>
+                <StringItem index="45" value="Bom Jesus da Lapa"/>
+                <StringItem index="46" value="Bom Jesus da Serra"/>
+                <StringItem index="47" value="Boninal"/>
+                <StringItem index="48" value="Bonito"/>
+                <StringItem index="49" value="Boquira"/>
+                <StringItem index="50" value="Botupora"/>
+                <StringItem index="51" value="Brejoes"/>
+                <StringItem index="52" value="Brejolandia"/>
+                <StringItem index="53" value="Brotas de Macaubas"/>
+                <StringItem index="54" value="Brumado"/>
+                <StringItem index="55" value="Buerarema"/>
+                <StringItem index="56" value="Buritirama"/>
+                <StringItem index="57" value="Caatiba"/>
+                <StringItem index="58" value="Cabaceiras do Paraguacu"/>
+                <StringItem index="59" value="Cachoeira"/>
+                <StringItem index="60" value="Cacule"/>
+                <StringItem index="61" value="Caem"/>
+                <StringItem index="62" value="Caetanos"/>
+                <StringItem index="63" value="Caetite"/>
+                <StringItem index="64" value="Cafarnaum"/>
+                <StringItem index="65" value="Cairu"/>
+                <StringItem index="66" value="Caldeirao Grande"/>
+                <StringItem index="67" value="Camacan"/>
+                <StringItem index="68" value="Camacari"/>
+                <StringItem index="69" value="Camamu"/>
+                <StringItem index="70" value="Campo Alegre de Lourdes"/>
+                <StringItem index="71" value="Campo Formoso"/>
+                <StringItem index="72" value="Canapolis"/>
+                <StringItem index="73" value="Canarana"/>
+                <StringItem index="74" value="Canavieiras"/>
+                <StringItem index="75" value="Candeal"/>
+                <StringItem index="76" value="Candeias"/>
+                <StringItem index="77" value="Candiba"/>
+                <StringItem index="78" value="Candido Sales"/>
+                <StringItem index="79" value="Cansancao"/>
+                <StringItem index="80" value="Canudos"/>
+                <StringItem index="81" value="Capela do Alto Alegre"/>
+                <StringItem index="82" value="Capim Grosso"/>
+                <StringItem index="83" value="Caraibas"/>
+                <StringItem index="84" value="Caravelas"/>
+                <StringItem index="85" value="Cardeal da Silva"/>
+                <StringItem index="86" value="Carinhanha"/>
+                <StringItem index="87" value="Casa Nova"/>
+                <StringItem index="88" value="Castro Alves"/>
+                <StringItem index="89" value="Catolandia"/>
+                <StringItem index="90" value="Catu"/>
+                <StringItem index="91" value="Caturama"/>
+                <StringItem index="92" value="Central"/>
+                <StringItem index="93" value="Chorrocho"/>
+                <StringItem index="94" value="Cicero Dantas"/>
+                <StringItem index="95" value="Cipo"/>
+                <StringItem index="96" value="Coaraci"/>
+                <StringItem index="97" value="Cocos"/>
+                <StringItem index="98" value="Conceicao da Feira"/>
+                <StringItem index="99" value="Conceicao do Almeida"/>
+                <StringItem index="100" value="Conceicao do Coite"/>
+                <StringItem index="101" value="Conceicao do Jacuipe"/>
+                <StringItem index="102" value="Conde"/>
+                <StringItem index="103" value="Condeuba"/>
+                <StringItem index="104" value="Contendas do Sincora"/>
+                <StringItem index="105" value="Coracao de Maria"/>
+                <StringItem index="106" value="Cordeiros"/>
+                <StringItem index="107" value="Coribe"/>
+                <StringItem index="108" value="Coronel Joao Sa"/>
+                <StringItem index="109" value="Correntina"/>
+                <StringItem index="110" value="Cotegipe"/>
+                <StringItem index="111" value="Cravolandia"/>
+                <StringItem index="112" value="Crisopolis"/>
+                <StringItem index="113" value="Cristopolis"/>
+                <StringItem index="114" value="Cruz das Almas"/>
+                <StringItem index="115" value="Curaca"/>
+                <StringItem index="116" value="Dario Meira"/>
+                <StringItem index="117" value="Dias d&apos;Avila"/>
+                <StringItem index="118" value="Dom Basilio"/>
+                <StringItem index="119" value="Dom Macedo Costa"/>
+                <StringItem index="120" value="Elisio Medrado"/>
+                <StringItem index="121" value="Encruzilhada"/>
+                <StringItem index="122" value="Entre Rios"/>
+                <StringItem index="123" value="Erico Cardoso"/>
+                <StringItem index="124" value="Esplanada"/>
+                <StringItem index="125" value="Euclides da Cunha"/>
+                <StringItem index="126" value="Eunapolis"/>
+                <StringItem index="127" value="Fatima"/>
+                <StringItem index="128" value="Feira da Mata"/>
+                <StringItem index="129" value="Feira de Santana"/>
+                <StringItem index="130" value="Filadelfia"/>
+                <StringItem index="131" value="Firmino Alves"/>
+                <StringItem index="132" value="Floresta Azul"/>
+                <StringItem index="133" value="Formosa do Rio Preto"/>
+                <StringItem index="134" value="Gandu"/>
+                <StringItem index="135" value="Gaviao"/>
+                <StringItem index="136" value="Gentio do Ouro"/>
+                <StringItem index="137" value="Gloria"/>
+                <StringItem index="138" value="Gongogi"/>
+                <StringItem index="139" value="Governador Mangabeira"/>
+                <StringItem index="140" value="Guajeru"/>
+                <StringItem index="141" value="Guanambi"/>
+                <StringItem index="142" value="Guaratinga"/>
+                <StringItem index="143" value="Heliopolis"/>
+                <StringItem index="144" value="Iacu"/>
+                <StringItem index="145" value="Ibiassuce"/>
+                <StringItem index="146" value="Ibicarai"/>
+                <StringItem index="147" value="Ibicoara"/>
+                <StringItem index="148" value="Ibicui"/>
+                <StringItem index="149" value="Ibipeba"/>
+                <StringItem index="150" value="Ibipitanga"/>
+                <StringItem index="151" value="Ibiquera"/>
+                <StringItem index="152" value="Ibirapitanga"/>
+                <StringItem index="153" value="Ibirapua"/>
+                <StringItem index="154" value="Ibirataia"/>
+                <StringItem index="155" value="Ibitiara"/>
+                <StringItem index="156" value="Ibitita"/>
+                <StringItem index="157" value="Ibotirama"/>
+                <StringItem index="158" value="Ichu"/>
+                <StringItem index="159" value="Igapora"/>
+                <StringItem index="160" value="Igrapiuna"/>
+                <StringItem index="161" value="Iguai"/>
+                <StringItem index="162" value="Ilheus"/>
+                <StringItem index="163" value="Inhambupe"/>
+                <StringItem index="164" value="Ipecaeta"/>
+                <StringItem index="165" value="Ipiau"/>
+                <StringItem index="166" value="Ipira"/>
+                <StringItem index="167" value="Ipupiara"/>
+                <StringItem index="168" value="Irajuba"/>
+                <StringItem index="169" value="Iramaia"/>
+                <StringItem index="170" value="Iraquara"/>
+                <StringItem index="171" value="Irara"/>
+                <StringItem index="172" value="Irece"/>
+                <StringItem index="173" value="Itabela"/>
+                <StringItem index="174" value="Itaberaba"/>
+                <StringItem index="175" value="Itabuna"/>
+                <StringItem index="176" value="Itacare"/>
+                <StringItem index="177" value="Itaete"/>
+                <StringItem index="178" value="Itagi"/>
+                <StringItem index="179" value="Itagiba"/>
+                <StringItem index="180" value="Itagimirim"/>
+                <StringItem index="181" value="Itaguacu da Bahia"/>
+                <StringItem index="182" value="Itaju do Colonia"/>
+                <StringItem index="183" value="Itajuipe"/>
+                <StringItem index="184" value="Itamaraju"/>
+                <StringItem index="185" value="Itamari"/>
+                <StringItem index="186" value="Itambe"/>
+                <StringItem index="187" value="Itanagra"/>
+                <StringItem index="188" value="Itanhem"/>
+                <StringItem index="189" value="Itaparica"/>
+                <StringItem index="190" value="Itape"/>
+                <StringItem index="191" value="Itapebi"/>
+                <StringItem index="192" value="Itapetinga"/>
+                <StringItem index="193" value="Itapicuru"/>
+                <StringItem index="194" value="Itapitanga"/>
+                <StringItem index="195" value="Itaquara"/>
+                <StringItem index="196" value="Itarantim"/>
+                <StringItem index="197" value="Itatim"/>
+                <StringItem index="198" value="Itirucu"/>
+                <StringItem index="199" value="Itiuba"/>
+                <StringItem index="200" value="Itororo"/>
+                <StringItem index="201" value="Ituacu"/>
+                <StringItem index="202" value="Itubera"/>
+                <StringItem index="203" value="Iuiu"/>
+                <StringItem index="204" value="Jaborandi"/>
+                <StringItem index="205" value="Jacaraci"/>
+                <StringItem index="206" value="Jacobina"/>
+                <StringItem index="207" value="Jaguaquara"/>
+                <StringItem index="208" value="Jaguarari"/>
+                <StringItem index="209" value="Jaguaripe"/>
+                <StringItem index="210" value="Jandaira"/>
+                <StringItem index="211" value="Jequie"/>
+                <StringItem index="212" value="Jeremoabo"/>
+                <StringItem index="213" value="Jiquirica"/>
+                <StringItem index="214" value="Jitauna"/>
+                <StringItem index="215" value="Joao Dourado"/>
+                <StringItem index="216" value="Juazeiro"/>
+                <StringItem index="217" value="Jucurucu"/>
+                <StringItem index="218" value="Jussara"/>
+                <StringItem index="219" value="Jussari"/>
+                <StringItem index="220" value="Jussiape"/>
+                <StringItem index="221" value="Lafaiete Coutinho"/>
+                <StringItem index="222" value="Lagoa Real"/>
+                <StringItem index="223" value="Laje"/>
+                <StringItem index="224" value="Lajedao"/>
+                <StringItem index="225" value="Lajedinho"/>
+                <StringItem index="226" value="Lajedo do Tabocal"/>
+                <StringItem index="227" value="Lamarao"/>
+                <StringItem index="228" value="Lapao"/>
+                <StringItem index="229" value="Lauro de Freitas"/>
+                <StringItem index="230" value="Lencois"/>
+                <StringItem index="231" value="Licinio de Almeida"/>
+                <StringItem index="232" value="Livramento do Brumado"/>
+                <StringItem index="233" value="Macajuba"/>
+                <StringItem index="234" value="Macarani"/>
+                <StringItem index="235" value="Macaubas"/>
+                <StringItem index="236" value="Macurure"/>
+                <StringItem index="237" value="Madre de Deus"/>
+                <StringItem index="238" value="Maetinga"/>
+                <StringItem index="239" value="Maiquinique"/>
+                <StringItem index="240" value="Mairi"/>
+                <StringItem index="241" value="Malhada de Pedras"/>
+                <StringItem index="242" value="Malhada"/>
+                <StringItem index="243" value="Manoel Vitorino"/>
+                <StringItem index="244" value="Mansidao"/>
+                <StringItem index="245" value="Maracas"/>
+                <StringItem index="246" value="Maragogipe"/>
+                <StringItem index="247" value="Marau"/>
+                <StringItem index="248" value="Marcionilio Souza"/>
+                <StringItem index="249" value="Mascote"/>
+                <StringItem index="250" value="Mata de Sao Joao"/>
+                <StringItem index="251" value="Matina"/>
+                <StringItem index="252" value="Medeiros Neto"/>
+                <StringItem index="253" value="Miguel Calmon"/>
+                <StringItem index="254" value="Milagres"/>
+                <StringItem index="255" value="Mirangaba"/>
+                <StringItem index="256" value="Mirante"/>
+                <StringItem index="257" value="Monte Santo"/>
+                <StringItem index="258" value="Morpara"/>
+                <StringItem index="259" value="Morro do Chapeu"/>
+                <StringItem index="260" value="Mortugaba"/>
+                <StringItem index="261" value="Mucuge"/>
+                <StringItem index="262" value="Mucuri"/>
+                <StringItem index="263" value="Mulungu do Morro"/>
+                <StringItem index="264" value="Mundo Novo"/>
+                <StringItem index="265" value="Muniz Ferreira"/>
+                <StringItem index="266" value="Muquem de Sao Francisco"/>
+                <StringItem index="267" value="Muritiba"/>
+                <StringItem index="268" value="Mutuipe"/>
+                <StringItem index="269" value="Nazare"/>
+                <StringItem index="270" value="Nilo Pecanha"/>
+                <StringItem index="271" value="Nordestina"/>
+                <StringItem index="272" value="Nova Canaa"/>
+                <StringItem index="273" value="Nova Fatima"/>
+                <StringItem index="274" value="Nova Ibia"/>
+                <StringItem index="275" value="Nova Itarana"/>
+                <StringItem index="276" value="Nova Redencao"/>
+                <StringItem index="277" value="Nova Soure"/>
+                <StringItem index="278" value="Nova Vicosa"/>
+                <StringItem index="279" value="Novo Horizonte"/>
+                <StringItem index="280" value="Novo Triunfo"/>
+                <StringItem index="281" value="Olindina"/>
+                <StringItem index="282" value="Oliveira dos Brejinhos"/>
+                <StringItem index="283" value="Ouricangas"/>
+                <StringItem index="284" value="Ourolandia"/>
+                <StringItem index="285" value="Palmas de Monte Alto"/>
+                <StringItem index="286" value="Palmeiras"/>
+                <StringItem index="287" value="Paramirim"/>
+                <StringItem index="288" value="Paratinga"/>
+                <StringItem index="289" value="Paripiranga"/>
+                <StringItem index="290" value="Pau Brasil"/>
+                <StringItem index="291" value="Paulo Afonso"/>
+                <StringItem index="292" value="Pe de Serra"/>
+                <StringItem index="293" value="Pedrao"/>
+                <StringItem index="294" value="Pedro Alexandre"/>
+                <StringItem index="295" value="Piata"/>
+                <StringItem index="296" value="Pilao Arcado"/>
+                <StringItem index="297" value="Pindai"/>
+                <StringItem index="298" value="Pindobacu"/>
+                <StringItem index="299" value="Pintadas"/>
+                <StringItem index="300" value="Pirai do Norte"/>
+                <StringItem index="301" value="Piripa"/>
+                <StringItem index="302" value="Piritiba"/>
+                <StringItem index="303" value="Planaltino"/>
+                <StringItem index="304" value="Planalto"/>
+                <StringItem index="305" value="Pocoes"/>
+                <StringItem index="306" value="Pojuca"/>
+                <StringItem index="307" value="Ponto Novo"/>
+                <StringItem index="308" value="Porto Seguro"/>
+                <StringItem index="309" value="Potiragua"/>
+                <StringItem index="310" value="Prado"/>
+                <StringItem index="311" value="Presidente Dutra"/>
+                <StringItem index="312" value="Presidente Janio Quadros"/>
+                <StringItem index="313" value="Presidente Tancredo Neves"/>
+                <StringItem index="314" value="Queimadas"/>
+                <StringItem index="315" value="Quijingue"/>
+                <StringItem index="316" value="Quixabeira"/>
+                <StringItem index="317" value="Rafael Jambeiro"/>
+                <StringItem index="318" value="Remanso"/>
+                <StringItem index="319" value="Retirolandia"/>
+                <StringItem index="320" value="Riachao das Neves"/>
+                <StringItem index="321" value="Riachao do Jacuipe"/>
+                <StringItem index="322" value="Riacho de Santana"/>
+                <StringItem index="323" value="Ribeira do Amparo"/>
+                <StringItem index="324" value="Ribeira do Pombal"/>
+                <StringItem index="325" value="Ribeirao do Largo"/>
+                <StringItem index="326" value="Rio Real"/>
+                <StringItem index="327" value="Rio de Contas"/>
+                <StringItem index="328" value="Rio do Antonio"/>
+                <StringItem index="329" value="Rio do Pires"/>
+                <StringItem index="330" value="Rodelas"/>
+                <StringItem index="331" value="Ruy Barbosa"/>
+                <StringItem index="332" value="Salinas da Margarida"/>
+                <StringItem index="333" value="Salvador"/>
+                <StringItem index="334" value="Santa Barbara"/>
+                <StringItem index="335" value="Santa Brigida"/>
+                <StringItem index="336" value="Santa Cruz Cabralia"/>
+                <StringItem index="337" value="Santa Cruz da Vitoria"/>
+                <StringItem index="338" value="Santa Ines"/>
+                <StringItem index="339" value="Santa Luzia"/>
+                <StringItem index="340" value="Santa Maria da Vitoria"/>
+                <StringItem index="341" value="Santa Rita de Cassia"/>
+                <StringItem index="342" value="Santa Teresinha"/>
+                <StringItem index="343" value="Santaluz"/>
+                <StringItem index="344" value="Santana"/>
+                <StringItem index="345" value="Santanopolis"/>
+                <StringItem index="346" value="Santo Amaro"/>
+                <StringItem index="347" value="Santo Antonio de Jesus"/>
+                <StringItem index="348" value="Santo Estevao"/>
+                <StringItem index="349" value="Sao Desiderio"/>
+                <StringItem index="350" value="Sao Domingos"/>
+                <StringItem index="351" value="Sao Felipe"/>
+                <StringItem index="352" value="Sao Felix do Coribe"/>
+                <StringItem index="353" value="Sao Felix"/>
+                <StringItem index="354" value="Sao Francisco do Conde"/>
+                <StringItem index="355" value="Sao Gabriel"/>
+                <StringItem index="356" value="Sao Goncalo dos Campos"/>
+                <StringItem index="357" value="Sao Jose da Vitoria"/>
+                <StringItem index="358" value="Sao Jose do Jacuipe"/>
+                <StringItem index="359" value="Sao Miguel das Matas"/>
+                <StringItem index="360" value="Sao Sebastiao do Passe"/>
+                <StringItem index="361" value="Sapeacu"/>
+                <StringItem index="362" value="Satiro Dias"/>
+                <StringItem index="363" value="Saubara"/>
+                <StringItem index="364" value="Saude"/>
+                <StringItem index="365" value="Seabra"/>
+                <StringItem index="366" value="Sebastiao Laranjeiras"/>
+                <StringItem index="367" value="Senhor do Bonfim"/>
+                <StringItem index="368" value="Sento Se"/>
+                <StringItem index="369" value="Serra Dourada"/>
+                <StringItem index="370" value="Serra Preta"/>
+                <StringItem index="371" value="Serra do Ramalho"/>
+                <StringItem index="372" value="Serrinha"/>
+                <StringItem index="373" value="Serrolandia"/>
+                <StringItem index="374" value="Simoes Filho"/>
+                <StringItem index="375" value="Sitio do Mato"/>
+                <StringItem index="376" value="Sitio do Quinto"/>
+                <StringItem index="377" value="Sobradinho"/>
+                <StringItem index="378" value="Souto Soares"/>
+                <StringItem index="379" value="Tabocas do Brejo Velho"/>
+                <StringItem index="380" value="Tanhacu"/>
+                <StringItem index="381" value="Tanque Novo"/>
+                <StringItem index="382" value="Tanquinho"/>
+                <StringItem index="383" value="Taperoa"/>
+                <StringItem index="384" value="Tapiramuta"/>
+                <StringItem index="385" value="Teixeira de Freitas"/>
+                <StringItem index="386" value="Teodoro Sampaio"/>
+                <StringItem index="387" value="Teofilandia"/>
+                <StringItem index="388" value="Teolandia"/>
+                <StringItem index="389" value="Terra Nova"/>
+                <StringItem index="390" value="Tremedal"/>
+                <StringItem index="391" value="Tucano"/>
+                <StringItem index="392" value="Uaua"/>
+                <StringItem index="393" value="Ubaira"/>
+                <StringItem index="394" value="Ubaitaba"/>
+                <StringItem index="395" value="Ubata"/>
+                <StringItem index="396" value="Uibai"/>
+                <StringItem index="397" value="Umburanas"/>
+                <StringItem index="398" value="Una"/>
+                <StringItem index="399" value="Urandi"/>
+                <StringItem index="400" value="Urucuca"/>
+                <StringItem index="401" value="Utinga"/>
+                <StringItem index="402" value="Valenca"/>
+                <StringItem index="403" value="Valente"/>
+                <StringItem index="404" value="Varzea Nova"/>
+                <StringItem index="405" value="Varzea da Roca"/>
+                <StringItem index="406" value="Varzea do Poco"/>
+                <StringItem index="407" value="Varzedo"/>
+                <StringItem index="408" value="Vera Cruz"/>
+                <StringItem index="409" value="Vereda"/>
+                <StringItem index="410" value="Vitoria da Conquista"/>
+                <StringItem index="411" value="Wagner"/>
+                <StringItem index="412" value="Wanderley"/>
+                <StringItem index="413" value="Wenceslau Guimaraes"/>
+                <StringItem index="414" value="Xique-Xique"/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnImprimir">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Imprimir"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnPesquisar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pesquisar"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="comboPesquisaMes">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="12">
+                <StringItem index="0" value="JANEIRO"/>
+                <StringItem index="1" value="FEVEREIRO"/>
+                <StringItem index="2" value="MAR&#xc7;O"/>
+                <StringItem index="3" value="ABRIL"/>
+                <StringItem index="4" value="MAIO"/>
+                <StringItem index="5" value="JUNHO"/>
+                <StringItem index="6" value="JULHO"/>
+                <StringItem index="7" value="AGOSTO"/>
+                <StringItem index="8" value="SETEMBRO"/>
+                <StringItem index="9" value="OUTUBRO"/>
+                <StringItem index="10" value="NOVEMBRO"/>
+                <StringItem index="11" value="DEZEMBRO"/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JFormattedTextField" name="txtAnoPesquisa">
+          <Properties>
+            <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
+              <Format format="####" subtype="-1" type="0"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAnoPesquisaActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel13">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="12" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Ano:"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="tbNaoPactuados">
+          <Properties>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0"/>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

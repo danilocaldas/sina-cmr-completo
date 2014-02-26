@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c4a34b3f-61ba-4a96-9b33-27298b06f299">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="ano" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="mes" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     CAIXA."NUMERO" AS CAIXA_NUMERO,
+     CAIXA."ANO" AS CAIXA_ANO,
+     CAIXA."MES" AS CAIXA_MES,
+     CAIXA."COR" AS CAIXA_COR,
+     CAIXA."PRESTADOR" AS CAIXA_PRESTADOR,
+     CAIXA."PROCEDIMENTO" AS CAIXA_PROCEDIMENTO
+FROM
+     "CAIXA" CAIXA
+WHERE
+	ANO LIKE $P{ano}
+	and MES LIKE $P{mes}
+ORDER BY
+	NUMERO ASC]]>
+	</queryString>
+	<field name="CAIXA_NUMERO" class="java.lang.Integer"/>
+	<field name="CAIXA_ANO" class="java.lang.String"/>
+	<field name="CAIXA_MES" class="java.lang.String"/>
+	<field name="CAIXA_COR" class="java.lang.String"/>
+	<field name="CAIXA_PRESTADOR" class="java.lang.String"/>
+	<field name="CAIXA_PROCEDIMENTO" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<line>
+				<reportElement uuid="42096b29-6cfe-4d66-94ba-6680149d3d34" x="0" y="78" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="3522714b-8e46-456d-85f0-497929dd5524" x="89" y="20" width="380" height="43"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO MENSAL ARQUIVO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="120" splitType="Stretch">
+			<textField>
+				<reportElement uuid="a2280c32-0068-4ced-88f6-2310a925c395" x="42" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CAIXA_NUMERO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="575934c9-4da6-4975-9318-4ca1da9e57cb" x="42" y="20" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CAIXA_ANO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="63198165-cd9b-4ad1-b3cb-80c2ab825c40" x="42" y="40" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CAIXA_MES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b19bddbd-52cc-4ec8-96aa-a6b199206478" x="42" y="60" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CAIXA_COR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c6625fe6-039a-4bda-b23f-311bd3c6e112" x="0" y="0" width="42" height="20"/>
+				<textElement/>
+				<text><![CDATA[CAIXA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="38077906-2ef9-420c-b5f5-abdb643f4820" x="0" y="20" width="42" height="20"/>
+				<textElement/>
+				<text><![CDATA[ANO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="af1551b2-e9e7-488a-af49-7eda7d53efaa" x="0" y="40" width="42" height="20"/>
+				<textElement/>
+				<text><![CDATA[MÊS:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="03bcf1fc-0cda-4e8c-96be-1c6b3682f0e1" x="0" y="60" width="42" height="20"/>
+				<textElement/>
+				<text><![CDATA[COR:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="cf94cc34-df1f-4cad-9cca-062128f60f83" x="184" y="20" width="152" height="85"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CAIXA_PRESTADOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2627f35a-4fd2-484e-8b77-32929249a291" x="369" y="20" width="160" height="85"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CAIXA_PROCEDIMENTO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="4456cba9-c2ad-43e4-bff8-babb3c5a78ac" x="184" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[PRESTADOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fcb918ea-eafd-4252-aed6-1f8a744b8cdb" x="369" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[PROCEDIMENTO]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="42096b29-6cfe-4d66-94ba-6680149d3d34" x="0" y="116" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="23" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>
