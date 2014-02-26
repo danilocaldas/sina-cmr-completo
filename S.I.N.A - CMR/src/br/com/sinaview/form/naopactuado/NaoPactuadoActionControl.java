@@ -18,7 +18,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.InputStream;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -218,28 +218,18 @@ public class NaoPactuadoActionControl implements ActionListener {
             JOptionPane.showMessageDialog(form, "Tente novamente!");
         }
     }
-
-    public boolean validarCamposAno() {
-        if (form.getTxtAnoPesquisa().getText() != "") {
-            return true;
-        }
-        return false;
-    }
-
+    
     public void abrirRelNaoPactuado() {
         //SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
         //java.util.Date dataInicio = (java.util.Date) form.getTxtDataDe().getDate();
         //java.util.Date dataFim = (java.util.Date) form.getTxtDataAte().getDate();
 
-        InputStream inputStream = getClass().getResourceAsStream("/relMainProdMedPerioNome.jasper");
-
-        int ano = Integer.parseInt(form.getTxtAnoPesquisa().getText());
-        String mes = form.getComboPesquisaMes().getSelectedItem().toString();
+        InputStream inputStream = getClass().getResourceAsStream("/relMainNaoPactuado.jasper");
 
         Map parametros = new HashMap();
-        parametros.put("ano", ano);
-        parametros.put("mes", mes);
-
+        parametros.put("ano", Integer.parseInt(form.getTxtAnoPesquisa().getText()));
+        parametros.put("mes", form.getComboPesquisaMes().getSelectedItem().toString());
+       
         try {
             ReportDao.openReport("Relatório de procedimentos realizados de Munícipios Não-Pactuados", inputStream, parametros,
                     CriaConexao.getConexao());
@@ -292,9 +282,9 @@ public class NaoPactuadoActionControl implements ActionListener {
             if (form.getRadioMunicipio().isSelected()) {
             }
             if (form.getRadioMes().isSelected()) {
-                if(validarCamposAno()){
+                
                     abrirRelNaoPactuado();
-                }
+                
             }
         }
     }

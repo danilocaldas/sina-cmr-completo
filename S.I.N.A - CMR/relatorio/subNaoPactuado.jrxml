@@ -15,12 +15,10 @@
      paciente, prestador, procedimento, municipio, ano, mes, observacao
 FROM
     NAO_PACTUADO
-where ano like $P{ano} and mes like $P{mes}
+where ano = $P{ano} and mes = $P{mes}
 
 ORDER BY
-PRESTADOR, PROCEDIMENTO
-
-]]>
+PRESTADOR, PROCEDIMENTO]]>
 	</queryString>
 	<field name="PACIENTE" class="java.lang.String"/>
 	<field name="PRESTADOR" class="java.lang.String"/>
