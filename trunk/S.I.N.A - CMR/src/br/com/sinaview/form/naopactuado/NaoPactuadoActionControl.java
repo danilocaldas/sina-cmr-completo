@@ -8,13 +8,22 @@ package br.com.sinaview.form.naopactuado;
 import br.com.sinacontrol.controller.NaoPactuadoController;
 import br.com.sinacontrol.controller.PrestadorController;
 import br.com.sinacontrol.controller.ProcedimentoController;
+import br.com.sinamodel.dao.CriaConexao;
+import br.com.sinamodel.dao.ReportDao;
 import br.com.sinamodel.entidades.NaoPactuados;
 import br.com.sinamodel.entidades.Prestador;
 import br.com.sinamodel.entidades.Procedimento;
+import br.com.sinaview.form.sistema.MenssageErrorForm;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.InputStream;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import javax.swing.JOptionPane;
+import net.sf.jasperreports.engine.JRException;
 
 /**
  *
@@ -23,13 +32,9 @@ import javax.swing.JOptionPane;
 public class NaoPactuadoActionControl implements ActionListener {
 
     private List<Prestador> prestadores;
-
     private List<Procedimento> procedimentos;
-
     private List<NaoPactuados> naoPactuados;
-
     public FormNaoPactuados form;
-
     private Long idNaoPactuados;
 
     public NaoPactuadoActionControl(FormNaoPactuados form) {
@@ -37,7 +42,7 @@ public class NaoPactuadoActionControl implements ActionListener {
         addBtnToForm();
         refreshComboPesquisas();
         enableFilds(false);
-        
+
     }
 
     private void addBtnToForm() {
@@ -93,7 +98,7 @@ public class NaoPactuadoActionControl implements ActionListener {
         if (naoPactuados != null) {
             form.getTbNaoPactuados().setModel(new NaoPactuadoTableModel(naoPactuados));
             form.getTbNaoPactuados().setDefaultRenderer(Object.class, new NaoPactuadoCellRenderer());
-            
+
         }
     }
 
@@ -110,10 +115,10 @@ public class NaoPactuadoActionControl implements ActionListener {
     }
 
     private void refreshTableMes() {
-        
-        
+
+
         naoPactuados = new NaoPactuadoController().listAnoMes(
-                "%" + String.valueOf(form.getComboPesquisaMes().getSelectedItem().toString()) + "%", 
+                "%" + String.valueOf(form.getComboPesquisaMes().getSelectedItem().toString()) + "%",
                 Integer.valueOf(form.getTxtAnoPesquisa().getText()));
         mostraDadosTable();
     }
@@ -131,7 +136,7 @@ public class NaoPactuadoActionControl implements ActionListener {
         form.getComboMunicipio().setEnabled(enabled);
         form.getTxtObservacao().setEnabled(enabled);
         form.getTxtPaciente().setEnabled(enabled);
-        
+
     }
 
     private void onCancelar() {
@@ -168,7 +173,7 @@ public class NaoPactuadoActionControl implements ActionListener {
         if (result == 1) {
             JOptionPane.showMessageDialog(form, "Registro inserido com sucesso!");
             this.form.getTxtPaciente().setText("");
-            
+
         } else {
             JOptionPane.showMessageDialog(form, "Tente novamente!");
         }
@@ -214,6 +219,38 @@ public class NaoPactuadoActionControl implements ActionListener {
         }
     }
 
+    public boolean validarCamposAno() {
+        if (form.getTxtAnoPesquisa().getText() != "") {
+            return true;
+        }
+        return false;
+    }
+
+    public void abrirRelNaoPactuado() {
+        //SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
+        //java.util.Date dataInicio = (java.util.Date) form.getTxtDataDe().getDate();
+        //java.util.Date dataFim = (java.util.Date) form.getTxtDataAte().getDate();
+
+        InputStream inputStream = getClass().getResourceAsStream("/relMainProdMedPerioNome.jasper");
+
+        int ano = Integer.parseInt(form.getTxtAnoPesquisa().getText());
+        String mes = form.getComboPesquisaMes().getSelectedItem().toString();
+
+        Map parametros = new HashMap();
+        parametros.put("ano", ano);
+        parametros.put("mes", mes);
+
+        try {
+            ReportDao.openReport("Relatório de procedimentos realizados de Munícipios Não-Pactuados", inputStream, parametros,
+                    CriaConexao.getConexao());
+        } catch (SQLException exc) {
+            exc.printStackTrace();
+        } catch (JRException exc) {
+            exc.printStackTrace();
+            MenssageErrorForm.msgErrorRelatorioNãoEncontrado();
+        }
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("Salvar")) {
@@ -248,17 +285,16 @@ public class NaoPactuadoActionControl implements ActionListener {
         } else if (e.getActionCommand().equals("Imprimir")) {
 
             if (form.getRadioPrestador().isSelected()) {
-
             }
             if (form.getRadioProcedimento().isSelected()) {
-
             }
 
             if (form.getRadioMunicipio().isSelected()) {
-
             }
             if (form.getRadioMes().isSelected()) {
-
+                if(validarCamposAno()){
+                    abrirRelNaoPactuado();
+                }
             }
         }
     }
