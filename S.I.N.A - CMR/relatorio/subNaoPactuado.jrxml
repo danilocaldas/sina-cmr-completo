@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e704e6ac-674b-4b27-b48d-6a46cdb90d48">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="ano" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="mes" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     
+     paciente, prestador, procedimento, municipio, ano, mes, observacao
+FROM
+    NAO_PACTUADO
+where ano like $P{ano} and mes like $P{mes}
+
+ORDER BY
+PRESTADOR, PROCEDIMENTO
+
+]]>
+	</queryString>
+	<field name="PACIENTE" class="java.lang.String"/>
+	<field name="PRESTADOR" class="java.lang.String"/>
+	<field name="PROCEDIMENTO" class="java.lang.String"/>
+	<field name="MUNICIPIO" class="java.lang.String"/>
+	<field name="ANO" class="java.lang.Integer"/>
+	<field name="MES" class="java.lang.String"/>
+	<field name="OBSERVACAO" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="ff29fa4c-c07e-467a-8dd2-36621cb37f48" x="0" y="31" width="100" height="20" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PACIENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="14624487-f882-4bef-a59a-cb711bb8f255" x="150" y="30" width="79" height="20" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRESTADOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="42e7f566-7e74-4c52-926a-fa4d4f95a98c" x="255" y="30" width="90" height="20" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROCEDIMENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="296c51a1-0242-46f3-935a-186315f23539" x="355" y="30" width="59" height="20" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MUNICÍPIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f32d620f-b434-4252-b67e-bd2bf8185d08" x="438" y="30" width="87" height="20" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OBSERVAÇÕES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="536b57ba-b10b-4ca5-a0ee-2572a13cc6c0" x="0" y="10" width="39" height="20" forecolor="#FF0000"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ANO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2ed78e74-0822-4287-bd01-dd5951431536" x="130" y="10" width="42" height="20" forecolor="#FF0000"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MÊS:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b5c975e2-ff4f-4884-9b80-4187be93e9f0" x="172" y="10" width="138" height="20" forecolor="#FF0000"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="37d1a092-baba-412a-a6c0-4002aed28bc3" x="39" y="10" width="61" height="20" forecolor="#FF0000"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ANO}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="3926d71e-875e-41c2-92a1-136380d2d457" x="0" y="30" width="525" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="3926d71e-875e-41c2-92a1-136380d2d457" x="0" y="51" width="525" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="3926d71e-875e-41c2-92a1-136380d2d457" x="0" y="0" width="525" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Solid" lineColor="#FF3333"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement uuid="9c7eff33-f6a4-46ff-8077-d7f8f793b2d7" x="0" y="0" width="150" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PACIENTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="bcfffa75-8bcc-4052-8e81-d7ba2d479ee3" x="150" y="0" width="105" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PRESTADOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="739d82f4-90ff-46e4-96fb-c1cd65011e28" x="255" y="0" width="100" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PROCEDIMENTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9a49def0-ea91-4d4b-93b5-23aee80c481d" x="438" y="0" width="100" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OBSERVACAO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ba16a8ce-0ade-4a10-8bc0-d02086ca65a5" x="355" y="0" width="83" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MUNICIPIO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

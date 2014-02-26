@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="081c5569-fecb-43df-8b3f-0e3bd463f8de">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["W:\\CRM\\CRM.Nucleo de Digitacao\\S.I.N.A - CMR\\relatorio\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ano" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="mes" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select COUNT(*) from nao_pactuado
+where
+ano like$P{ano} and mes like $P{mes}]]>
+	</queryString>
+	<field name="C1" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="76" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="b1ee677f-37f6-413b-b8d0-6dfd72327999" x="57" y="0" width="454" height="29"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Procedimentos Realizados de Município Não Pactuados]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="36176055-0f12-42e7-8666-f5d926eac260" x="152" y="29" width="266" height="27"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Central Municipal de Regulação]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1b4d021f-faf3-42bd-a69f-72f8c76e79e7" x="180" y="56" width="214" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[SMS - Secretária Municipal de Saúde]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="43">
+			<subreport>
+				<reportElement uuid="53a12e9a-2d7c-41b6-939b-158da2d8e7b5" x="0" y="0" width="555" height="40"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="mes">
+					<subreportParameterExpression><![CDATA[$P{mes}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ano">
+					<subreportParameterExpression><![CDATA[$P{ano}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "subNaoPactuado.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="32" splitType="Stretch">
+			<line>
+				<reportElement uuid="5e03af33-9c99-427d-b163-1c88ac3c470f" x="0" y="10" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement uuid="9ac0cc91-7864-4cdb-8210-5c87d78959b8" x="115" y="12" width="163" height="20" forecolor="#FF3333"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{C1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="8122bd64-2540-4275-b987-cc11457a514f" x="0" y="12" width="115" height="20" forecolor="#FF3333"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total de Registros:]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="bb0f6176-4af3-40b9-84bd-a03bee82b43e" x="436" y="10" width="119" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7d9cbe4f-a7f8-48fa-8302-13ca301185ea" x="218" y="12" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="680be1ff-2732-40ca-b568-2346ea1d7c34" x="298" y="12" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
